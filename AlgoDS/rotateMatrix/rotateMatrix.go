@@ -9,8 +9,8 @@ func rotateMatrix(matrix [][]int) [][]int {
 		return [][]int{}
 	}
 
-	for i := 0; i <= rowCount/2; i++ {
-		for j := i; j <= colCount/2; j++ {
+	for i := 0; i < rowCount/2; i++ {
+		for j := i; j < rowCount-i-1; j++ {
 			buf := matrix[i][j]
 			matrix[i][j] = matrix[rowCount-1-j][i]
 			matrix[rowCount-1-j][i] = matrix[rowCount-1-i][rowCount-1-j]
